@@ -11,7 +11,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css" />
 		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+		<link rel="stylesheet" href="dist/theme/blood.css" />
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
@@ -19,8 +19,40 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-background-iframe="http://jake.homeassistant:8123/energy/electricity"
+						data-background-interactive data-preload>
+				<h2>Iframe</h2>
+				</section>
+				<section>
+					HA Test
+					<p>
+						<iframe width="1800" height="600" data-src="http://jake.homeassistant:8123/energy/electricity" data-preload></iframe>
+					</p>
+				</section>
+				<!-- <section>
+					Frigate Test
+					<p>
+						<iframe width="1800" height="600" data-src="http://frigate.localhost" data-preload></iframe>
+					</p>
+				</section> -->
+				<section>
+					Frigate Test (Direct)
+					<p>
+						<iframe width="1800" height="600" data-src="http://192.168.0.233:8971" data-preload></iframe>
+					</p>
+				</section>
+				<section>
+					Jellyfin Test
+					<p>
+						<iframe width="1800" height="600" data-src="http://ubuntu.jake:8096/web/#/home" data-preload></iframe>
+					</p>
+				</section>
+				<section>
+					TubeArchivist Test
+					<p>
+						<iframe width="1800" height="600" data-src="http://ubuntu.jake:8000/" data-preload></iframe>
+					</p>
+				</section>
 			</div>
 		</div>
 
