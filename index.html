@@ -7,51 +7,581 @@
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 		/>
 
-		<title>reveal.js</title>
+		<title>I ❤️ Open Source</title>
 
 		<link rel="stylesheet" href="dist/reset.css" />
 		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/blood.css" />
+		<link rel="stylesheet" href="dist/theme/jake.css" />
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+		<style>
+			.just-blur {
+				filter: blur(15px);
+				opacity: 0.75;
+			}
+			.fragment.blur {
+				filter: blur(15px);
+				opacity: 0.75;
+			}
+			.fragment.blur.visible {
+				filter: none;
+				opacity: 1;
+			}
+
+			.fragment.blur-grow {
+				filter: blur(15px);
+				opacity: 0.75;
+			}
+			.fragment.blur-grow.visible {
+				filter: none;
+				opacity: 1;
+			}
+
+			.fragment.blur-grow.current-fragment {
+				transform: scale(1.2);
+			}
+
+			.fragment.blur-more {
+				filter: blur(50px);
+				opacity: 1;
+			}
+			.fragment.blur-more.visible {
+				filter: none;
+				opacity: 1;
+			}
+
+			.bullets {
+				font-size: 1.5em;
+			}
+
+			.bullets p {
+				margin-bottom: 50px;
+			}
+
+			iframe {
+				border-radius: 40px;
+			}
+
+			.just-strike {
+				text-decoration: line-through;
+			}
+			.glow-box {
+				background-color: #1a1a1a;
+				border-radius: 10px;
+				
+				/* syntax: x-offset y-offset blur-radius spread-radius color */
+				box-shadow: 0 0 20px 5px rgba(0, 238, 255, 0.6);
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-iframe="http://jake.homeassistant:8123/energy/electricity"
-						data-background-interactive data-preload>
+				<!-- <section data-background-iframe="http://jake.homeassistant:8123/energy/electricity"
+						data-background-interactive data-background-preload>
 				<h2>Iframe</h2>
-				</section>
-				<section>
-					HA Test
-					<p>
-						<iframe width="1800" height="600" data-src="http://jake.homeassistant:8123/energy/electricity" data-preload></iframe>
-					</p>
-				</section>
-				<!-- <section>
-					Frigate Test
-					<p>
-						<iframe width="1800" height="600" data-src="http://frigate.localhost" data-preload></iframe>
-					</p>
 				</section> -->
+				<section data-auto-animate>
+					<h2>I ❤️ Open Source</h2>
+					<h4 class="fragment">
+						How I started to take back ownership of tech in my life
+					</h4>
+				</section>
+				<section data-auto-animate data-background-image="./media/pic32.jpg" data-background-opacity="0.2">
+					<div class="r-stack">
+						<div>
+							<h2>I ❤️ Open Source</h2>
+							<h4>
+								How I started to take back ownership of tech in my life
+							</h4>
+							<p>(also cat pictures so you have to pay attention)</p>
+						</div>
+						<img
+							class="fragment fade-up"
+							src="./media/pic51.jpg"
+							width="1600"
+							height="auto"
+						/>
+						<img
+							class="fragment fade-up"
+							src="./media/pic5.jpg"
+							width="900"
+							height="auto"
+							style="transform: translate(500px, 0);"
+						/>
+						<img
+							class="fragment fade-up"
+							src="./media/pic53.jpg"
+							width="900"
+							height="auto"
+							style="transform: translate(-500px, 0);"
+						/>
+					</div>
+				</section>
 				<section>
-					Frigate Test (Direct)
+					<h1>Motivation</h1>
+					<div class="r-stack">
+						<div class="bullets" style="transform: translate(300px, 0px); max-width: 800px;">
+							<p class="fragment custom blur-grow">Microsoft Windows</p>
+							<p class="fragment custom blur-grow">Ring / Flock</p>
+							<p class="fragment custom blur-grow">Futurehome</p>
+							<p class="fragment custom blur-grow">General trend to remove ownership and control</p>
+						</div>
+						<img
+							data-id="img"
+							class="fragment custom blur-more"
+							src="./media/pic12.jpg"
+							width="700"
+							height="auto"
+							style="transform: translate(-700px, 40px);"
+						/>
+						<img
+							data-id="img"
+							class="fragment fade-in"
+							src="./media/pic54.jpg"
+							width="700"
+							height="auto"
+							style="transform: translate(-700px, 40px);"
+						/>
+						<img
+							data-id="img"
+							class="fragment fade-in"
+							src="./media/pic49.jpg"
+							width="700"
+							height="auto"
+							style="transform: translate(-700px, 40px);"
+						/>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h1>How do I take control of tech in my life?</h1>
+				</section>
+				<section data-auto-animate>
+					<h1>How do I take control of tech in my life?</h1>
+					<hr style="margin-top: 90px;" />
+					<h3 style="margin-top: 100px;">How do I build a "smarter" home that doesn't extort me<br />or spy on me?</h3>
+				</section>
+				<section data-auto-animate>
+					<h2>My Home Tech Requirements</h2>
+				</section>
+				<section data-auto-animate>
+					<h2>My Home Tech Requirements</h2>
+					<div class="r-stack">
+						<div class="bullets" style="transform: translate(-400px, 0px); max-width: 1000px;">
+							<p class="fragment custom blur-grow" data-fragment-index="1">Nothing connects directly to the internet that doesn't NEED to</p>
+							<p class="fragment custom blur-grow" data-fragment-index="2">No dependency on cloud software</p>
+							<p class="fragment custom blur-grow" data-fragment-index="3">Ideally uses open protocols or is <span class="fragment highlight-current-blue" data-fragment-index="3">open&nbsp;source</span></p>
+							<p class="fragment custom blur-grow">Integrates with what I already own</p>
+						</div>
+						<img
+							data-id="img"
+							class="fragment custom blur-more"
+							src="./media/pic8.jpg"
+							width="900"
+							height="auto"
+							style="transform: translate(600px, 40px);"
+						/>
+						<img
+							data-id="img"
+							class="fragment fade-in"
+							src="./media/pic46.jpg"
+							width="900"
+							height="auto"
+							style="transform: translate(600px, 40px);"
+						/>
+					</div>
+				</section>
+				<section>
+					<div class="r-stack">
+						<h1 class="fragment fade-out" data-fragment-index="0">What is Open Source?</h1>
+						<h1 class="fragment fade-up" data-fragment-index="0">What is FOSS?</h1>
+					</div>
+					<div style="display: flex;">
+						<img
+							data-id="img"
+							class="fragment custom blur-more"
+							src="./media/pic44.jpg"
+							width="400"
+							height="auto"
+							style="object-fit: cover;"
+						/>
+						<div class="bullets" style="margin: 0 20px;">
+							<p class="fragment custom blur-grow">Free and Open Source Software</p>
+							<p class="fragment custom blur-grow">Free (as in Freedom)</p>
+							<p class="fragment custom blur-grow">Usually also free (as in $0)</p>
+							<p class="fragment custom blur-grow">Open Source = Source code is available and modifiable</p>
+							<p class="fragment custom blur-grow">Complete ownership</p>
+						</div>
+						<img
+							data-id="img"
+							class="fragment custom blur-more"
+							src="./media/pic53.jpg"
+							width="400"
+							height="auto"
+							style="object-fit: cover;"
+						/>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h1>My alternatives</h1>
+				</section>
+				<section data-auto-animate>
+					<h1>My alternatives</h1>
+					<div class="r-stack">
+						<div style="display: flex; gap: 50px;">
+							<div class="bullets" style="text-align: right;">
+								<p class="fragment custom blur" data-fragment-index="1"><span class="fragment strike" data-fragment-index="2">Microsoft Windows</span></p>
+								<p class="fragment custom blur" data-fragment-index="4"><span class="fragment strike" data-fragment-index="5">Alexa / Google Home / HomeKit</span></p>
+								<p class="just-blur">Ring / Wyze / Nest Cameras</p>
+								<p class="just-blur">Too many streaming services</p>
+								<p class="just-blur">Google Drive</p>
+								<p class="just-blur">PowerPoint / Google Slides</p>
+							</div>
+							<div class="bullets" style="text-align: left;">
+								<p class="fragment custom blur" data-fragment-index="2">Linux</p>
+								<p class="fragment custom blur" data-fragment-index="5">Home Assistant</p>
+								<p class="just-blur">A variety of cameras with Frigate</p>
+								<p class="just-blur">Physical Media + Jellyfin</p>
+								<p class="just-blur">(WIP) Nextcloud</p>
+								<p class="just-blur">Reveal.js</p>
+							</div>
+						</div>
+						<div class="fragment fade-out" style="position: absolute; border-radius: 50px;" data-fragment-index="4">
+							<video
+								autoplay
+								data-autoplay
+								data-fragment-index="3"
+								width="800"
+								src="./media/vid1.mp4"
+								muted
+								loop
+								style="z-index: 999; transform: translate(150px, 0);"
+								class="fragment"
+								>
+							</video>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate
+					data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<h2 data-id="ha">Home Assistant?</h2>
+				</section>
+				<section data-auto-animate
+					data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<h2 data-id="ha">Home Assistant!</h2>
+					<div class="r-stack">
+						<p>
+							<iframe width="1800" height="900" data-src="http://jake.homeassistant:8123/" data-preload></iframe>
+						</p>
+						<span style="pointer-events: none;" class="fragment fade-up" data-fragment-index="1">
+							<img
+								class="fragment fade-out"
+								data-fragment-index="2"
+								src="./media/pic59.jpg"
+								width="auto"
+								height="900"
+							/>
+						</span>
+						<div style="pointer-events: none; display: flex; gap: 50px; width: 1900px;" class="fragment fade-out" data-fragment-index="5">
+							<img
+								class="fragment fade-up"
+								data-fragment-index="3"
+								src="./media/pic40.jpg"
+								width="auto"
+								height="900"
+							/>
+							<img
+								class="fragment fade-up"
+								data-fragment-index="4"
+								src="./media/pic39.jpg"
+								width="auto"
+								height="900"
+							/>
+						</div>
+						<div style="pointer-events: none; display: flex; gap: 50px; width: 1900px;" class="fragment fade-out" data-fragment-index="8">
+							<img
+								class="fragment fade-up"
+								data-fragment-index="6"
+								src="./media/pic38.jpg"
+								width="auto"
+								height="900"
+							/>
+							<img
+								class="fragment fade-up"
+								data-fragment-index="7"
+								src="./media/pic42.jpg"
+								width="auto"
+								height="900"
+							/>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>My alternatives</h1>
+					<div class="r-stack">
+						<div style="display: flex; gap: 50px;">
+							<div class="bullets" style="text-align: right;">
+								<p class="just-strike">Microsoft Windows</p>
+								<p class="just-strike">Alexa / Google Home / HomeKit</p>
+								<p class="fragment custom blur" data-fragment-index="1"><span class="fragment strike" data-fragment-index="2">Ring / Wyze / Nest Cameras</span></p>
+								<p class="just-blur">Too many streaming services</p>
+								<p class="just-blur">Google Drive</p>
+								<p class="just-blur">PowerPoint / Google Slides</p>
+							</div>
+							<div class="bullets" style="text-align: left;">
+								<p>Linux</p>
+								<p>Home Assistant</p>
+								<p class="fragment custom blur" data-fragment-index="2">A variety of cameras with Frigate</p>
+								<p class="just-blur">Physical Media + Jellyfin</p>
+								<p class="just-blur">(WIP) Nextcloud</p>
+								<p class="just-blur">Reveal.js</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate
+					data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-stack">
+						<h2 data-id="ha">Frigate?</h2>
+						<span style="pointer-events: none;" class="fragment fade-up" data-fragment-index="1">
+							<img
+								class="fragment fade-out"
+								data-fragment-index="2"
+								src="./media/pic47.jpg"
+								width="auto"
+								height="900"
+							/>
+						</span>
+					</div>
+				</section>
+				<section data-auto-animate
+					data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-stack">
+						<h2 data-id="ha">Frigate!</h2>
+					</div>
+					<div class="r-stack">
+						<p>
+							<iframe width="1800" height="900" data-src="http://ubuntu.jake:8971/"></iframe>
+						</p>
+						<span style="pointer-events: none;" class="fragment fade-out" data-fragment-index="3">
+							<img
+								class="fragment fade-up"
+								data-fragment-index="1"
+								src="./media/pic1.jpg"
+								width="auto"
+								height="900"
+							/>
+							<img
+								class="fragment fade-up"
+								data-fragment-index="2"
+								src="./media/pic31.jpg"
+								width="auto"
+								height="900"
+							/>
+						</span>
+						<span style="pointer-events: none;" class="fragment fade-out" data-fragment-index="4">
+							<img
+								class="fragment fade-up"
+								data-fragment-index="3"
+								src="./media/pic33.jpg"
+								width="auto"
+								height="900"
+							/>
+						</span>
+					</div>
+				</section>
+				<section>
+					<h1>My alternatives</h1>
+					<div class="r-stack">
+						<div style="display: flex; gap: 50px;">
+							<div class="bullets" style="text-align: right;">
+								<p class="just-strike">Microsoft Windows</p>
+								<p class="just-strike">Alexa / Google Home / HomeKit</p>
+								<p class="just-strike">Ring / Wyze / Nest Cameras</p>
+								<p class="fragment custom blur" data-fragment-index="1"><span class="fragment strike" data-fragment-index="2">Too many streaming services</span></p>
+								<p class="just-blur">Google Drive</p>
+								<p class="just-blur">PowerPoint / Google Slides</p>
+							</div>
+							<div class="bullets" style="text-align: left;">
+								<p>Linux</p>
+								<p>Home Assistant</p>
+								<p>A variety of cameras with Frigate</p>
+								<p class="fragment custom blur" data-fragment-index="2">Physical Media + Jellyfin</p>
+								<p class="just-blur">(WIP) Nextcloud</p>
+								<p class="just-blur">Reveal.js</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>Physical Media</h1>
+					<div class="r-stack">
+						<img
+							class="fragment fade-up"
+							src="./media/pic56.jpg"
+							width="1000"
+							height="auto"
+						/>
+						<img
+							class="fragment fade-up"
+							src="./media/pic58.jpg"
+							width="1000"
+							height="auto"
+							style="transform: translate(-20px, 40px);"
+						/>
+						<img
+							class="fragment fade-up"
+							src="./media/pic57.jpg"
+							width="1000"
+							height="auto"
+							style="transform: translate(40px, -20px);"
+						/>
+						<img
+							class="fragment fade-up"
+							src="./media/pic21.jpg"
+							width="auto"
+							height="900"
+							style="object-fit: cover;"
+						/>
+						<img
+							class="fragment fade-up"
+							src="./media/pic18.jpg"
+							width="auto"
+							height="900"
+							style="object-fit: cover;"
+						/>
+						<img
+							class="fragment fade-up"
+							src="./media/pic16.jpg"
+							width="auto"
+							height="900"
+							style="object-fit: cover;"
+						/>
+						<img
+							class="fragment fade-up"
+							src="./media/pic20.jpg"
+							width="auto"
+							height="900"
+							style="object-fit: cover;"
+						/>
+					</div>
+				</section>
+				<section>
+					<h2>Jellyfin!</h2>
 					<p>
-						<iframe width="1800" height="600" data-src="http://192.168.0.233:8971" data-preload></iframe>
+						<iframe width="1800" height="900" data-src="http://ubuntu.jake:8096/web/#/home" data-preload></iframe>
 					</p>
 				</section>
 				<section>
-					Jellyfin Test
+					<h1>My alternatives</h1>
+					<div class="r-stack">
+						<div style="display: flex; gap: 50px;">
+							<div class="bullets" style="text-align: right;">
+								<p class="just-strike">Microsoft Windows</p>
+								<p class="just-strike">Alexa / Google Home / HomeKit</p>
+								<p class="just-strike">Ring / Wyze / Nest Cameras</p>
+								<p class="just-strike">Too many streaming services</p>
+								<p class="fragment custom blur" data-fragment-index="1"><span class="fragment strike" data-fragment-index="2">Google Drive</span></p>
+								<p class="fragment custom blur" data-fragment-index="3"><span class="fragment strike" data-fragment-index="4">PowerPoint / Google Slides</span></p>
+							</div>
+							<div class="bullets" style="text-align: left;">
+								<p>Linux</p>
+								<p>Home Assistant</p>
+								<p>A variety of cameras with Frigate</p>
+								<p>Physical Media + Jellyfin</p>
+								<p class="fragment custom blur" data-fragment-index="2">(WIP) Nextcloud</p>
+								<p class="fragment custom blur" data-fragment-index="4">Reveal.js</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h2 data-id="control">Complete C0ntrol</h2>
+				</section>
+				<section data-auto-animate data-transition="zoom-out">
+					<h2 data-id="control">Complete C0ntrol</h2>
 					<p>
-						<iframe width="1800" height="600" data-src="http://ubuntu.jake:8096/web/#/home" data-preload></iframe>
+						<iframe width="1800" height="900" data-src="http://localhost:8080/" data-preload sandbox="allow-forms allow-scripts allow-same-origin"></iframe>
 					</p>
 				</section>
-				<section>
-					TubeArchivist Test
-					<p>
-						<iframe width="1800" height="600" data-src="http://ubuntu.jake:8000/" data-preload></iframe>
-					</p>
+				<section data-transition="zoom">
+					<h1>Thank You!</h1>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section data-visibility="uncounted">
+					<h1>Bonus cat pics!</h1>
+				</section>
+				<section data-visibility="uncounted" data-background-image="./media/pic14.jpg" data-background-size="contain"></section>
+				<section data-visibility="uncounted" data-background-image="./media/pic37.jpg" data-background-size="contain"></section>
+				<section data-visibility="uncounted" data-background-image="./media/pic41.jpg" data-background-size="contain"></section>
+				<section data-visibility="uncounted" data-background-image="./media/pic45.jpg" data-background-size="contain"></section>
+				<section data-visibility="uncounted" data-background-image="./media/pic4.jpg" data-background-size="contain"></section>
+				<section data-visibility="uncounted" data-background-image="./media/pic36.jpg" data-background-size="contain"></section>
+				<section data-visibility="uncounted" data-background-image="./media/pic35.jpg" data-background-size="contain"></section>
+				<section data-visibility="uncounted" data-background-image="./media/pic32.jpg" data-background-size="contain">
+					<h1 style="padding-top: 400px;">Fin</h1>
 				</section>
 			</div>
 		</div>
@@ -69,6 +599,10 @@
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+				width: 1920,
+				height: 1080,
+				embedded: true,
+				transition: 'slide'
 			});
 		</script>
 	</body>
